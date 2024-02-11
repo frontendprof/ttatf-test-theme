@@ -8,7 +8,7 @@
         <h1 class="headline headline--large">Xush kelibsiz!</h1>
         <h2 class="headline headline--medium">Sizga manzur keladigan haqiqiy tibbiyyot ilm dargohi</h2>
         <h3 class="headline headline--small">O'zingiz qiziqqan yo'nalish haqida batafsil bilishni istamaysiz?</h3>
-        <a href="#" class="btn btn--large btn--blue">Yo'nalishni qidiring</a>
+        <a href="<?php echo get_post_type_archive_link('program'); ?>" class="btn btn--large btn--blue">Yo'nalishni qidiring</a>
       </div>
     </div>
 
