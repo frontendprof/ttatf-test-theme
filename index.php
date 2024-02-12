@@ -1,16 +1,13 @@
 <?php
     
-    get_header(); ?>
-
-    <div class="page-banner">
-      <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('images/ttatf-8.jpg'); ?>)"></div>
-          <div class="page-banner__content container container--narrow">
-            <h1 class="page-banner__title">Blog sahifasiga marhamat! </h1>
-            <div class="page-banner__intro">
-              <p>So'nggi maqolalarimizdan bahramand bo'ling.</p>
-            </div>
-          </div>
-    </div>
+    get_header(); 
+    
+    pageBanner(array(
+      'title'=>'Blog sahifasiga marhamat!',
+      'subtitle'=>'So\'nggi maqolalarimizdan bahramand bo\'ling.',
+      'photo'=>get_theme_file_uri('images/ttatf-8.jpg')
+    ));
+    ?>
 
     <div class="container container--narrow page-section"> 
       <?php while(have_posts()) {
