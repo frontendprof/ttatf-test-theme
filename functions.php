@@ -36,6 +36,7 @@ function pageBanner($args = NULL) {
 
 
 function uni_files(){
+    wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyDzjOkd5zGpMacKJFChrfj27J-SSxnrij0', NULL, 1.0, true );
     wp_enqueue_script('main-uni-js', get_theme_file_uri('/build/index.js'), array('jquery'), 1.0, true );
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
     wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -67,6 +68,10 @@ add_action('after_setup_theme','uni_features');
 
 function uni_adjust_queries($query){
 
+  if(!is_admin() AND is_post_type_archive('campus') AND $query->is_main_query()){
+    $query->set('posts_per_page',-1);
+}
+
     if(!is_admin() AND is_post_type_archive('program') AND $query->is_main_query()){
         $query->set('orderby','title');
         $query->set('order','ASC');
@@ -97,3 +102,8 @@ function uni_adjust_queries($query){
 
 add_action('pre_get_posts','uni_adjust_queries');
 
+function uniMapKey($api){
+  $api['key']='AIzaSyDzjOkd5zGpMacKJFChrfj27J-SSxnrij0';
+  return $api;
+}
+add_filter('acf/fields/google_map/api','uniMapKey');

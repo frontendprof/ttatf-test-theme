@@ -12,15 +12,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
 /* harmony import */ var _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/HeroSlider */ "./src/modules/HeroSlider.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './modules/GoogleMap '"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 // Our modules / classes
 
 
 
+
 // Instantiate a new object using our modules/classes
 const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
 const heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const googleMap = new Object(function webpackMissingModule() { var e = new Error("Cannot find module './modules/GoogleMap '"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();
 
 /***/ }),
 

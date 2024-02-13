@@ -6,7 +6,7 @@
         pageBanner(array(
             'title'=>'About Us',
             'subtitle'=>'Tibbiyot sohasini haqiqiy mutaxassislaridan o\'rganing.',
-            // 'photo'=>get_theme_file_uri('images/ttatf-2.jpg')
+            'photo'=>get_theme_file_uri('images/ttatf-2.jpg')
           ));
         ?>
             
